@@ -66,8 +66,8 @@ void serve(int sockfd) {
         }
         
         data_len = recv(clfd, buf, BUFLEN, 0);
-        printf("receive len: %ld, msg: %s", data_len,  buf);
-        data_len = send(clfd, buf, BUFLEN, 0);
+        //printf("receive len: %ld, msg: %s", data_len,  buf);
+        data_len = send(clfd, "Hello World\n", 12, 0);
         close(clfd);
     }
 
